@@ -1,23 +1,22 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import NavBar from './NavBar';
-import CartPage from './CartPage';
-import BooksListPage from './BooksListPage';
-import { CartProvider } from './CartContext';
+import Test from './Test';
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+import UniquePropertiesList from './components/UniquePropertiesList';
+import PropertyTypeList from './components/PropertyTypeList';
 
 function App() {
   return (
-    <CartProvider>
-      <div className='min-h-screen bg-gray-100 overflow-scroll'>
-        <NavBar />
-        <div className='grow'>
-          <Routes>
-            <Route path="/cartpage/" element={<CartPage />} />
-            <Route path="/" element={<BooksListPage />} />
-          </Routes>
-        </div>
-      </div>
-    </CartProvider>
+    <div>
+      <Navbar />
+      <Header />
+      <UniquePropertiesList />
+      <PropertyTypeList />
+      {/* <Routes >
+        <Route path="/" element={<Test />} />
+      </Routes> */}
+    </div>
   );
 }
 

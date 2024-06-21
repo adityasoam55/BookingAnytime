@@ -6,11 +6,11 @@ export default {
   ],
   theme: {
     extend: {
-      colors:{
-        tomato:{
-          default: "#f58132"
+        colors: {
+          light: "#006ce4",
+          default: "#003580",
+          border: "#febb02",
         }
-      }
     },
   },
   plugins: [],
