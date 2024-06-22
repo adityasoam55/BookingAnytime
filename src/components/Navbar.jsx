@@ -7,7 +7,7 @@ function Navbar() {
             <nav>
                 <div className="container max-w-5xl mx-auto flex justify-between items-center px-4">
                     <div className="flex items-center">
-                        <span className="text-2xl font-semibold">Booking.com</span>
+                        <span className="text-2xl font-semibold">Booking-Anytime.com</span>
                     </div>
                     <div className="flex items-center space-x-4">
                         <button className="bg-white text-light font-semibold py-1 px-3 rounded">Register</button>
