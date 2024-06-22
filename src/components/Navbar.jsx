@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaBed, FaCar, FaPlane, FaTaxi } from 'react-icons/fa';
-import Button from './Button';
 
 function Navbar() {
     return (

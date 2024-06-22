@@ -1,10 +1,10 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Test from './Test';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import UniquePropertiesList from './components/UniquePropertiesList';
 import PropertyTypeList from './components/PropertyTypeList';
+import TrendingDestinationList from './components/TrendingDestinationList';
+import ExploreList from './components/ExploreList';
 
 function App() {
   return (
@@ -13,6 +13,8 @@ function App() {
       <Header />
       <UniquePropertiesList />
       <PropertyTypeList />
+      <TrendingDestinationList />
+      <ExploreList />
       {/* <Routes >
         <Route path="/" element={<Test />} />
       </Routes> */}
