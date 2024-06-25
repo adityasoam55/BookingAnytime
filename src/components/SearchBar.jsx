@@ -6,6 +6,7 @@ import { DateRange } from 'react-date-range';
 import { format } from 'date-fns';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
+import { searchHotels } from './api';
 
 function SearchBar() {
     const [destination, setDestination] = useState("");
@@ -37,8 +38,15 @@ function SearchBar() {
     }
 
     const handleSearch = () => {
-        navigate("/hotels", { state: { destination, date, options } });
+        searchHotels({ destination }).then((data) => {
+            const hotels = data.hotels;
+            const locations = data.locations;
+            console.log("Hotels are", hotels);
+            console.log("Locations are", locations);
+            navigate("/hotellist", { state: { destination, date, options, hotels, locations } });
+        });
     }
+
     return (
         <div className='w-full flex justify-center'>
             <div className="h-8 border-4 border-border flex justify-around items-center py-6 space-x-2 bg-white shadow-lg mx-auto w-full max-w-5xl rounded absolute -bottom-6">
@@ -47,7 +55,8 @@ function SearchBar() {
                     <input
                         type="text" placeholder='Where are you going?'
                         className='outline-none text-gray-700 border-none'
-                        onChange={(e) => setDestination(e.target.value)}
+                        onChange={(e) => setDestination(e.target.value.toLowerCase())}
+                        value={destination}
                     />
                 </div>
                 <div className="flex items-center gap-2.5">

@@ -1,23 +1,17 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Header from './components/Header';
-import UniquePropertiesList from './components/UniquePropertiesList';
-import PropertyTypeList from './components/PropertyTypeList';
-import TrendingDestinationList from './components/TrendingDestinationList';
-import ExploreList from './components/ExploreList';
+import { Route, Routes } from 'react-router-dom';
+import HotelList from './components/HotelList';
+import Home from './components/Home'; // Add this import
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Header />
-      <UniquePropertiesList />
-      <PropertyTypeList />
-      <TrendingDestinationList />
-      <ExploreList />
-      {/* <Routes >
-        <Route path="/" element={<Test />} />
-      </Routes> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/hotellist" element={<HotelList />} />
+      </Routes>
     </div>
   );
 }

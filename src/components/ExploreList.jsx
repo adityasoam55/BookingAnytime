@@ -12,7 +12,7 @@ function ExploreList() {
                 <div className="flex overflow-x-auto space-x-4">
                     {
                         newData.map((item) => {
-                          return  <Explore {...item}/>
+                          return  <Explore key={item.id} {...item}/>
                         })
                     }
                 </div>
