@@ -49,7 +49,7 @@ function SearchBar() {
 
     return (
         <div className='w-full flex justify-center'>
-            <div className="h-8 border-4 border-border flex justify-around items-center py-6 space-x-2 bg-white shadow-lg mx-auto w-full max-w-5xl rounded absolute -bottom-6">
+            <div className="h-auto border-4 border-border flex flex-col sm:flex-row justify-around items-center py-2 space-y-2 md:space-y-0 md:space-x-2 bg-white shadow-lg mx-auto w-full max-w-5xl rounded absolute -bottom-6">
                 <div className="flex items-center gap-2.5">
                     <FaBed className='text-gray-300' />
                     <input
@@ -71,7 +71,7 @@ function SearchBar() {
                         onChange={item => setDate([item.selection])}
                         moveRangeOnFirstSelection={false}
                         ranges={date}
-                        className='absolute z-20 top-12'
+                        className='absolute z-20 sm:top-12 top-16 max-sm:right-8'
                     />}
                 </div>
                 <div className="flex items-center gap-2.5">
@@ -81,7 +81,7 @@ function SearchBar() {
                     }}
                         className='text-gray-300 cursor-pointer'>{`${options.adult} adult  ${options.children} children  ${options.room} room `}</span>
                     {openOptions && <div
-                        className="absolute z-20 top-12 bg-white rounded-sm text-gray-700">
+                        className="absolute z-20  -bottom-28 max-sm:-bottom-20 max-sm:right-20 bg-white rounded-sm text-gray-700">
                         <div className="flex justify-between m-2.5 w-48">
                             <span className="optionText">Adult</span>
                             <div className="flex items-center gap-2.5 bg-white text-black">

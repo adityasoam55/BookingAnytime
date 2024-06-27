@@ -18,7 +18,7 @@ function Navbar() {
                 </div>
             </nav>
 
-            <div className="container max-w-5xl mx-auto flex items-center gap-10 mb-3 mt-5 pl-2.5">
+            <div className="container max-w-5xl mx-auto items-center gap-10 mb-3 mt-5 pl-2.5 hidden md:flex">
                 <div className="flex items-center gap-2.5">
                     <FaBed />
                     <span>Stays</span>
@@ -40,6 +40,7 @@ function Navbar() {
                     <span>Airport taxis</span>
                 </div>
             </div>
+
         </div>
     )
 }
